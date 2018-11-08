@@ -16,14 +16,6 @@ time.sleep(2.0)
 # start the cameras recording
 while True:
 
-    # iterate over the cameras
-    for wcam, pcam in zip(webcam, picam):
-        wcamStream = wcam.read()
-        wcamStream = imutils.resize(wcamStream, width=400)
-
-        pcamStream = pcam.read()
-        pcamStream = imutils.resize(pcamStream, width=400)
-
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
